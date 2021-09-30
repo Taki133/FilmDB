@@ -1,0 +1,7 @@
+{
+  "name": "FilmDB",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
