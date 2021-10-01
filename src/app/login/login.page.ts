@@ -1,15 +1,31 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { UserServiceService } from '../user-service.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
+  providers: [UserServiceService]
 })
-export class LoginPage implements OnInit {
+export class LoginPage {
 
-  constructor() { }
+  email: string = "";
+  password: string = "";
 
-  ngOnInit() {
+  constructor(private _UserServiceService : UserServiceService) { 
+    //console.log(this._UserServiceService.users);
+  }
+
+  LoginClick() {
+    if (this._UserServiceService.UserLogin(this.email, this.password))
+    {
+      
+    }
+    else
+    {
+
+    }
   }
 
 }

@@ -1,0 +1,16 @@
+[
+    {
+        "ID":"1",
+        "FirstName":"Takács",
+        "LastName":"András",
+        "Email":"andras10001@gmail.com",
+        "Password":"asdasd"
+    },
+    {
+        "ID":"2",
+        "FirstName":"Teszt",
+        "LastName":"Elek",
+        "Email":"asd@asd.hu",
+        "Password":"engem"
+    }
+]
