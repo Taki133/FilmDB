@@ -1,9 +1,18 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>signup</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
+<ion-content padding>
+  <ion-text color="black">
+    <h1 class="container">Sign up</h1>
+  </ion-text>
+  <div class="container">
+    <ion-input [(ngModel)]="firstName" #ctrl="ngModel" class="input" type="text" placeholder="Firstname"></ion-input>
+    <ion-input [(ngModel)]="lastName" #ctrl="ngModel" class="input" type="text" placeholder="Lastname"></ion-input>
+    <ion-input [(ngModel)]="email" #ctrl="ngModel" class="input" type="email" placeholder="Email adress"></ion-input>
+    <ion-input [(ngModel)]="password" #ctrl="ngModel" class="input" type="password" placeholder="Password"></ion-input>
+    <ion-input [(ngModel)]="passwordRe" #ctrl="ngModel" class="input" type="password" placeholder="Confirm password"></ion-input>
+    <div class="ion-text-center margin-top">
+      <ion-button (click)="registerClick()">Sign up</ion-button>
+    </div>
+    <div class="ion-text-center margin-top">
+      <ion-router-link routerLink="/login" routerDirection="back">Login</ion-router-link>
+    </div>
+  </div>
 </ion-content>
