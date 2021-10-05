@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
+//import { StorageModule } from '@ionic/storage';
 
 @NgModule({
   declarations: [AppComponent],

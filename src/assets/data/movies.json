@@ -1,0 +1,29 @@
+[
+    {
+        "ID":1,
+        "User_ID":1,
+        "Title": "Tomorrow War",
+        "Year":2021,
+        "IMDB":6.6,
+        "Descript":"A family man is drafted to fight in a future war where the fate of humanity relies on his ability to confront the past.",
+        "Url":"https://www.elozetes.hu/img2/original/aAfaUZobGCsWjl8VBaz6X9PGZ8A.jpg"
+    },
+    {
+        "ID":2,
+        "User_ID":2,
+        "Title": "Boss Level",
+        "Year":2021,
+        "IMDB":6.8,
+        "Descript":"A retired Special Forces officer is trapped in a never-ending time loop on the day of his death.",
+        "Url":"https://media.port.hu/images/001/336/986.jpg"
+    },
+    {
+        "ID":3,
+        "User_ID":1,
+        "Title": "Reminiscence",
+        "Year":2021,
+        "IMDB":5.9,
+        "Descript":"Nick Bannister, a private investigator of the mind, navigates the alluring world of the past when his life is changed by new client Mae. A simple case becomes an obsession after she disappears and he fights to learn the truth about her.",
+        "Url":"https://static.mozipremierek.hu/poster/4272-uj-mult.61813.jpg"
+    }
+]

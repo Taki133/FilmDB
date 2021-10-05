@@ -1,0 +1,89 @@
+<ion-header translucent="true">
+  <ion-toolbar>
+    <ion-buttons collapse="true" slot="end">
+      <ion-button (click)="logoutClick()">Logout</ion-button>
+    </ion-buttons>
+    <ion-title>Movies</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-select [(ngModel)]="orderTarget" #ctrl="ngModel" class="input" (ionChange)="onSelectChangeTarget()" placeholder="Order by Year">
+          <ion-select-option value="year">Order by Year</ion-select-option>
+          <ion-select-option value="imdb">Order by IMDB</ion-select-option>
+        </ion-select>
+      </ion-col>
+      <ion-col>
+        <ion-select [(ngModel)]="sortSelect" #ctrl="ngModel" class="input" (ionChange)="onSelectChangeOrder()" placeholder="Ascending">
+          <ion-select-option value="1">Ascend</ion-select-option>
+          <ion-select-option value="-1">Descend</ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-select [(ngModel)]="userFilter" #ctrl="ngModel" class="input" (ionChange)="onSelectChangeUser()" placeholder="Filter by User">
+          <ion-select-option *ngFor="let user of userList" value="{{user.ID}}">{{user.LastName}}</ion-select-option>
+        </ion-select>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-list>
+    <ion-item *ngFor="let movie of list">
+      <ion-card>
+        <ion-grid>
+          
+          <ion-row>
+            <ion-col class="text-align-right">
+              <ion-router-link (click)="deleteMovieClick(movie)">X</ion-router-link>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size="3">
+              <img src="{{movie.Url}}" />
+            </ion-col>
+            <ion-col>
+              <ion-row>
+                <ion-col>
+                  <ion-card-title>{{movie.Title}}</ion-card-title>
+                </ion-col>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <ion-card-content>
+                    <ion-grid>
+
+                      <ion-row>
+                        <ion-col>{{movie.Year}}</ion-col>
+                        <ion-col>{{movie.IMDB}}</ion-col>
+                        <ion-col>{{movie.User.LastName}}</ion-col>
+                      </ion-row>
+
+                    </ion-grid>
+                  </ion-card-content>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>{{movie.Descript}}</ion-col>
+          </ion-row>
+
+        </ion-grid>
+      </ion-card>
+      <ion-label></ion-label>
+    </ion-item>
+  </ion-list>
+  
+</ion-content>
+<ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab-button routerLink="/members/addmovie" size="small">
+    +
+  </ion-fab-button>
+</ion-fab>
