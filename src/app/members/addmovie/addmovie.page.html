@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Add Movie</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <ion-input [(ngModel)]="userName" #ctrl="ngModel" readonly="true" class="input" type="text"></ion-input>
+    <ion-input [(ngModel)]="title" #ctrl="ngModel" class="input" type="text" placeholder="Title"></ion-input>
+    <ion-input [(ngModel)]="year" #ctrl="ngModel" class="input" type="number" placeholder="Year"></ion-input>
+    <ion-input [(ngModel)]="imdb" #ctrl="ngModel" class="input" type="number" placeholder="IMDB Rating"></ion-input>
+    <ion-textarea [(ngModel)]="descript" #ctrl="ngModel" class="input" placeholder="Description"></ion-textarea>
+    <ion-input [(ngModel)]="url" #ctrl="ngModel" (ionChange)="thumbnailUrlChange()" class="input" type="text" placeholder="Thumbnail Url"></ion-input>
+    <div class="margin-top">
+      <div class="thumbnail">
+        <img src="{{img}}" class="img"/>
+      </div>
+    </div>
+    <div class="ion-text-center margin-top">
+      <ion-button (click)="addMovieClick()">Add</ion-button>
+    </div>
+  </div>
+</ion-content>
